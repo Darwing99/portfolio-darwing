@@ -37,12 +37,12 @@ export const PROFILE = {
   linkedin: 'https://www.linkedin.com/in/darwing-rodilso-hernandez-castellanos-95825a248',
   github: 'https://github.com/darwing99',
   cvViewUrl: {
-    es: 'cv-darwing-hernandez-es.html',
-    en: 'cv-darwing-hernandez-en.html',
+    es: 'assets/cv-darwing-hernandez-es.html',
+    en: 'assets/cv-darwing-hernandez-en.html',
   } as LocalizedText,
   cvUrl: {
-    es: 'cv-darwing-hernandez-es.pdf',
-    en: 'cv-darwing-hernandez-en.pdf',
+    es: 'assets/cv-darwing-hernandez-es.pdf',
+    en: 'assets/cv-darwing-hernandez-en.pdf',
   } as LocalizedText,
   englishAcademyUrl: 'https://hn.linkedin.com/company/academiasilvermonthn',
 
