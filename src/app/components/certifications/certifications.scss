@@ -1,0 +1,55 @@
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cert-card__status {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  background: var(--accent-blue-soft);
+  border: 1px solid rgba(74, 127, 181, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 3px 9px;
+  margin-bottom: 4px;
+
+  app-icon {
+    font-size: 13px;
+  }
+}
+
+.cert-card__status.is-completed {
+  color: var(--success);
+  background: rgba(111, 174, 138, 0.14);
+  border-color: rgba(111, 174, 138, 0.3);
+}
+
+.cert-card__title {
+  font-size: 17px;
+}
+
+.cert-card__org {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-gold);
+}
+
+.cert-card__detail {
+  color: var(--text-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}

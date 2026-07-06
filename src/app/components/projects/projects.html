@@ -1,0 +1,22 @@
+<section class="section" id="projects">
+  <div class="container">
+    <p class="eyebrow">{{ i18n.t(ui.projects.eyebrow) }}</p>
+    <h2 class="section-title" appReveal>{{ i18n.t(ui.projects.title) }}</h2>
+    <p class="section-lead" appReveal>{{ i18n.t(ui.projects.lead) }}</p>
+
+    <div class="projects__grid">
+      @for (project of projects; track project.id; let i = $index) {
+        <article class="project-card card" [appReveal]="(i % 2) * 70">
+          <div class="project-card__highlight">{{ i18n.t(project.highlight) }}</div>
+          <h3 class="project-card__name">{{ project.name }}</h3>
+          <p class="project-card__summary">{{ i18n.t(project.summary) }}</p>
+          <div class="project-card__tags">
+            @for (tag of project.tags; track tag) {
+              <span class="chip">{{ tag }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

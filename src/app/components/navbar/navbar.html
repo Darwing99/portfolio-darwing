@@ -1,0 +1,40 @@
+<header class="navbar" [class.is-scrolled]="scrolled()">
+  <div class="container navbar__inner">
+    <a href="#top" class="navbar__brand">
+      <span class="navbar__mark" aria-hidden="true"></span>
+      <span class="navbar__name">{{ name.split(' ')[0] }} {{ name.split(' ')[1] }}</span>
+    </a>
+
+    <nav class="navbar__links" [class.is-open]="menuOpen()">
+      <a href="#about" (click)="closeMenu()">{{ i18n.t(ui.nav.about) }}</a>
+      <a href="#skills" (click)="closeMenu()">{{ i18n.t(ui.nav.skills) }}</a>
+      <a href="#projects" (click)="closeMenu()">{{ i18n.t(ui.nav.projects) }}</a>
+      <a href="#education" (click)="closeMenu()">{{ i18n.t(ui.nav.education) }}</a>
+      <a href="#certifications" (click)="closeMenu()">{{ i18n.t(ui.nav.certifications) }}</a>
+      <a href="#contact" (click)="closeMenu()">{{ i18n.t(ui.nav.contact) }}</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button
+        type="button"
+        class="lang-switch"
+        (click)="i18n.toggle()"
+        [attr.aria-label]="'Switch language'"
+      >
+        <span [class.is-active]="i18n.lang() === 'es'">ES</span>
+        <span class="lang-switch__sep">/</span>
+        <span [class.is-active]="i18n.lang() === 'en'">EN</span>
+      </button>
+
+      <button
+        type="button"
+        class="navbar__burger"
+        (click)="menuOpen.set(!menuOpen())"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

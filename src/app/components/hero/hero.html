@@ -1,0 +1,37 @@
+<section class="hero" id="top">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">{{ i18n.t(ui.hero.eyebrow) }}</p>
+      <h1 class="hero__title">
+        {{ profile.name }}
+      </h1>
+      <p class="hero__role">{{ i18n.t(profile.role) }}</p>
+      <p class="hero__summary">{{ i18n.t(profile.summary) }}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="#projects">
+          {{ i18n.t(ui.hero.ctaProjects) }}
+          <app-icon name="arrow-right" class="btn__icon"></app-icon>
+        </a>
+        <a class="btn btn-ghost" href="#contact">{{ i18n.t(ui.hero.ctaContact) }}</a>
+        <a class="btn btn-ghost" [href]="i18n.t(profile.cvViewUrl)" target="_blank" rel="noopener">
+          <app-icon name="eye" class="btn__icon"></app-icon>
+          {{ i18n.t(ui.hero.ctaCvView) }}
+        </a>
+        <a class="btn btn-ghost" [href]="i18n.t(profile.cvUrl)" download>
+          <app-icon name="download" class="btn__icon"></app-icon>
+          {{ i18n.t(ui.hero.ctaCv) }}
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__terminal" appReveal>
+      <div class="terminal">
+        <div class="terminal__bar">
+          <span></span><span></span><span></span>
+        </div>
+        <pre class="terminal__body">{{ typedLine() }}<span class="cursor" [class.is-blinking]="showCursorBlink()">▍</span></pre>
+      </div>
+    </div>
+  </div>
+</section>

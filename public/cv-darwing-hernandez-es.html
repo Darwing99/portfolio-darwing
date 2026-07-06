@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Darwing Hernández Castellanos — CV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a2230;
+    --muted: #55606c;
+    --faint: #8b96a1;
+    --accent: #a5741f;
+    --rule: #d9dee3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 34px 44px;
+    max-width: 800px;
+    margin-inline: auto;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--ink);
+    background: #fff;
+  }
+  h1, h2, h3 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    margin: 0;
+  }
+  header.cv-header {
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+  }
+  .cv-role {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 3px;
+  }
+  .cv-contact {
+    margin-top: 8px;
+    font-size: 10.5px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+  }
+  .cv-contact span::after {
+    content: '·';
+    margin-left: 10px;
+    color: var(--faint);
+  }
+  .cv-contact span:last-child::after {
+    content: '';
+    margin: 0;
+  }
+  section {
+    margin-bottom: 14px;
+    break-inside: avoid;
+  }
+  h2.section-title {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+    border-bottom: 1.5px solid var(--accent);
+  }
+  .cv-summary {
+    color: var(--muted);
+    max-width: 100%;
+  }
+  .job {
+    margin-bottom: 11px;
+    break-inside: avoid;
+  }
+  .job:last-child {
+    margin-bottom: 0;
+  }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .job-title {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .job-org {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .job-dates {
+    font-size: 10px;
+    color: var(--faint);
+    font-family: 'Space Grotesk', sans-serif;
+    white-space: nowrap;
+  }
+  ul.job-bullets {
+    margin: 5px 0 0;
+    padding-left: 16px;
+    color: var(--muted);
+  }
+  ul.job-bullets li {
+    margin-bottom: 2px;
+  }
+  .edu-item {
+    margin-bottom: 9px;
+  }
+  .edu-item:last-child {
+    margin-bottom: 0;
+  }
+  .edu-title {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .edu-meta {
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .edu-detail {
+    font-size: 10.5px;
+    color: var(--faint);
+    font-style: italic;
+  }
+  ul.plain-list {
+    margin: 0;
+    padding-left: 16px;
+    color: var(--muted);
+  }
+  ul.plain-list li {
+    margin-bottom: 2px;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+  .skill-row span.skill-label {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .skill-row {
+    color: var(--muted);
+    font-size: 10.5px;
+  }
+  .lang-grid, .interests-line {
+    color: var(--muted);
+    font-size: 10.5px;
+  }
+  .lang-grid div {
+    margin-bottom: 2px;
+  }
+  .references-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 24px;
+    color: var(--muted);
+    font-size: 10.5px;
+  }
+  @media print {
+    body {
+      padding: 0;
+      font-size: 10.5px;
+    }
+    @page {
+      size: A4;
+      margin: 16mm 15mm;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <header class="cv-header">
+    <h1>Darwing Hernández Castellanos</h1>
+    <div class="cv-role">Ingeniero en Computación · Desarrollador Full Stack</div>
+    <div class="cv-contact">
+      <span>Santa Bárbara, Santa Bárbara, Honduras</span>
+      <span>+504 9873-9415</span>
+      <span>darwing.hernandezhn&#64;gmail.com</span>
+      <span>linkedin.com/in/darwing-rodilso-hernandez-castellanos-95825a248</span>
+      <span>github.com/darwing99</span>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Perfil Profesional</h2>
+    <p class="cv-summary">Ingeniero en Computación con sólida experiencia en desarrollo de software, análisis de datos y soporte técnico. Me especializo en crear aplicaciones robustas y eficientes para plataformas móviles, web y de escritorio. Apasionado por la tecnología y en constante búsqueda de nuevos desafíos profesionales.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Experiencia Laboral</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title"><span class="job-org">Grupo Farsiman</span> — Desarrollador Full Stack</span>
+        <span class="job-dates">Junio 2024 — Actualidad</span>
+      </div>
+      <ul class="job-bullets">
+        <li>Desarrollo de soluciones para plataformas móviles, web y de escritorio.</li>
+        <li>Análisis de datos utilizando Power BI y SQL Server.</li>
+        <li>Desarrollo de aplicaciones móviles con Flutter e Ionic.</li>
+        <li>Frontend con Angular.</li>
+        <li>Backend con C# y .NET (versiones 7, 8 y 9).</li>
+        <li>Desarrollo de aplicaciones de escritorio con Visual Basic y C#.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title"><span class="job-org">AdminSoft-CM Inversiones</span> — Desarrollador y Soporte Técnico</span>
+        <span class="job-dates">Agosto 2022 — Mayo 2024</span>
+      </div>
+      <ul class="job-bullets">
+        <li>Desarrollo de soluciones informáticas con C#.</li>
+        <li>Administración de bases de datos en SQL Server.</li>
+        <li>Soporte técnico a usuarios y mantenimiento de equipos de cómputo.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title"><span class="job-org">Aplicaciones en Java</span></span>
+        <span class="job-dates">Septiembre 2018 — Octubre 2019</span>
+      </div>
+      <ul class="job-bullets">
+        <li>Desarrollo de aplicaciones web con Java Spring para la gestión de gastos.</li>
+        <li>Administración de bases de datos MySQL.</li>
+        <li>Implementación en servidores Apache Tomcat.</li>
+        <li>Aplicación de principios de Clean Code.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Educación</h2>
+
+    <div class="edu-item">
+      <div class="job-head">
+        <span class="edu-title">Universidad Tecnológica de Honduras (UTH)</span>
+        <span class="job-dates">2017 — 2023</span>
+      </div>
+      <div class="edu-meta">Ingeniería en Computación</div>
+      <div class="edu-detail">Reconocimiento Magna Cum Laude — Excelencia Académica</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="job-head">
+        <span class="edu-title">Instituto Departamental La Independencia</span>
+        <span class="job-dates">2015 — 2016</span>
+      </div>
+      <div class="edu-meta">Bachillerato en Ciencias y Humanidades</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Reconocimientos</h2>
+    <ul class="plain-list">
+      <li>Diploma de Reconocimiento, Comité de Olimpiadas Matemáticas, 2016</li>
+      <li>Magna Cum Laude, Medalla de Plata, Universidad Tecnológica de Honduras, 2023</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-label">Lenguajes de Programación:</span> C#, Java, Kotlin, Visual Basic</div>
+      <div class="skill-row"><span class="skill-label">Frameworks:</span> .NET 7/8/9, Java Spring, Flutter, Ionic, Angular</div>
+      <div class="skill-row"><span class="skill-label">Bases de Datos:</span> SQL Server, MySQL</div>
+      <div class="skill-row"><span class="skill-label">BI y RPA:</span> Power BI, Power Automate</div>
+      <div class="skill-row"><span class="skill-label">Sistemas Operativos:</span> Debian, CentOS</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Idiomas</h2>
+    <div class="lang-grid">
+      <div>Español — Nativo</div>
+      <div>Inglés — Intermedio</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Intereses y Pasatiempos</h2>
+    <div class="interests-line">Programación · Ajedrez · Anime · Senderismo · Café</div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Referencias Personales</h2>
+    <div class="references-grid">
+      <div>Orbin Rivera — Tel: 9469-7277</div>
+      <div>Raúl Mejía Mercado — Tel: 9792-4772</div>
+    </div>
+  </section>
+
+</body>
+</html>

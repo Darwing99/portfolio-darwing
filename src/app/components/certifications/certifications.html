@@ -1,0 +1,21 @@
+<section class="section" id="certifications">
+  <div class="container">
+    <p class="eyebrow">{{ i18n.t(ui.certifications.eyebrow) }}</p>
+    <h2 class="section-title" appReveal>{{ i18n.t(ui.certifications.title) }}</h2>
+    <p class="section-lead" appReveal>{{ i18n.t(ui.certifications.lead) }}</p>
+
+    <div class="cert-grid">
+      @for (item of items; track item.id; let i = $index) {
+        <article class="cert-card card" [appReveal]="(i % 3) * 70">
+          <span class="cert-card__status" [class.is-completed]="item.status === 'completed'">
+            <app-icon [name]="item.status === 'completed' ? 'check' : 'clock'"></app-icon>
+            {{ item.status === 'completed' ? i18n.t(ui.certifications.completed) : i18n.t(ui.certifications.inProgress) }}
+          </span>
+          <h3 class="cert-card__title">{{ i18n.t(item.title) }}</h3>
+          <p class="cert-card__org">{{ item.org }}</p>
+          <p class="cert-card__detail">{{ i18n.t(item.detail) }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="section" id="education">
+  <div class="container">
+    <p class="eyebrow">{{ i18n.t(ui.education.eyebrow) }}</p>
+    <h2 class="section-title" appReveal>{{ i18n.t(ui.education.title) }}</h2>
+
+    <ol class="timeline">
+      @for (item of items; track item.id; let i = $index) {
+        <li class="timeline__item" [appReveal]="i * 90">
+          <span class="timeline__period">{{ item.period }}</span>
+          <div class="timeline__node" aria-hidden="true"></div>
+          <div class="timeline__content">
+            <h3>{{ i18n.t(item.title) }}</h3>
+            <p class="timeline__org">{{ item.org }}</p>
+            <p class="timeline__detail">{{ i18n.t(item.detail) }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

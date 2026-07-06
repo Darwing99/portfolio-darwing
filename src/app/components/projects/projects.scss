@@ -1,0 +1,43 @@
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  padding: 26px 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-card__highlight {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-gold);
+  letter-spacing: 0.02em;
+}
+
+.project-card__name {
+  font-size: 19px;
+  color: var(--text);
+}
+
+.project-card__summary {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  flex-grow: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}

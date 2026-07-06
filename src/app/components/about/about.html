@@ -1,0 +1,20 @@
+<section class="section" id="about">
+  <div class="container">
+    <p class="eyebrow">{{ i18n.t(ui.about.eyebrow) }}</p>
+    <h2 class="section-title" appReveal>{{ i18n.t(ui.about.title) }}</h2>
+
+    <div class="about__grid">
+      <p class="about__text" appReveal>{{ i18n.t(profile.summary) }}</p>
+
+      <div class="about__facts" appReveal>
+        <span class="about__facts-location">{{ profile.location }}</span>
+        <span class="about__facts-availability">{{ i18n.t(profile.availability) }}</span>
+        <span class="about__facts-divider" aria-hidden="true"></span>
+        <span class="about__facts-learning">{{ i18n.t(profile.currentFocus) }}</span>
+        <a class="about__facts-learning about__facts-link" [href]="profile.englishAcademyUrl" target="_blank" rel="noopener">
+          {{ i18n.t(profile.currentlyLearning) }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

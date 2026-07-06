@@ -1,0 +1,17 @@
+<nav class="rail" aria-label="Section schema navigation">
+  <div class="rail__line" aria-hidden="true"></div>
+  <ul>
+    @for (node of nodes; track node.id) {
+      <li>
+        <a
+          [href]="'#' + node.id"
+          class="rail__node"
+          [class.is-active]="activeId() === node.id"
+        >
+          <span class="rail__diamond" aria-hidden="true"></span>
+          <span class="rail__label">{{ i18n.t(node.label) }}</span>
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

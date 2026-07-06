@@ -1,0 +1,31 @@
+<section class="section contact" id="contact">
+  <div class="container">
+    <p class="eyebrow">{{ i18n.t(ui.contact.eyebrow) }}</p>
+    <h2 class="section-title" appReveal>{{ i18n.t(ui.contact.title) }}</h2>
+    <p class="section-lead" appReveal>{{ i18n.t(ui.contact.lead) }}</p>
+
+    <div class="contact__links" appReveal>
+      <a class="contact__link card" [href]="'mailto:' + profile.email">
+        <app-icon name="mail" class="contact__link-icon"></app-icon>
+        <span class="contact__link-text">
+          <span class="contact__link-label">{{ i18n.t(ui.contact.email) }}</span>
+          <span class="contact__link-value">{{ profile.email }}</span>
+        </span>
+      </a>
+      <a class="contact__link card" [href]="profile.linkedin" target="_blank" rel="noopener">
+        <app-icon name="linkedin" class="contact__link-icon"></app-icon>
+        <span class="contact__link-text">
+          <span class="contact__link-label">LinkedIn</span>
+          <span class="contact__link-value">/in/{{ profile.linkedin.split('/').pop() }}</span>
+        </span>
+      </a>
+      <a class="contact__link card" [href]="profile.github" target="_blank" rel="noopener">
+        <app-icon name="github" class="contact__link-icon"></app-icon>
+        <span class="contact__link-text">
+          <span class="contact__link-label">GitHub</span>
+          <span class="contact__link-value">{{ profile.github.split('/').pop() }}</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>

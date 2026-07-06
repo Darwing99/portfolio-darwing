@@ -1,0 +1,29 @@
+<section class="section" id="skills">
+  <div class="container">
+    <p class="eyebrow">{{ i18n.t(ui.skills.eyebrow) }}</p>
+    <h2 class="section-title" appReveal>{{ i18n.t(ui.skills.title) }}</h2>
+    <p class="section-lead" appReveal>{{ i18n.t(ui.skills.lead) }}</p>
+
+    <div class="skills__grid">
+      @for (group of groups; track group.id; let i = $index) {
+        <div class="skills__table card" [appReveal]="i * 70">
+          <div class="skills__table-head">
+            <div class="skills__table-heading">
+              <app-icon [name]="iconFor(group.id)" class="skills__table-icon"></app-icon>
+              <span class="skills__table-name">{{ group.id }}</span>
+            </div>
+            <span class="skills__table-label">{{ i18n.t(group.label) }}</span>
+          </div>
+          <ul class="skills__table-rows">
+            @for (item of group.items; track item) {
+              <li>
+                <span class="skills__row-key">·</span>
+                {{ item }}
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</section>
