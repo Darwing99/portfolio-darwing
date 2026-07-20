@@ -15,6 +15,12 @@
               <span class="chip">{{ tag }}</span>
             }
           </div>
+          @if (project.liveUrl) {
+            <a class="project-card__link" [href]="project.liveUrl" target="_blank" rel="noopener">
+              {{ i18n.t(ui.projects.viewSite) }}
+              <app-icon name="arrow-right"></app-icon>
+            </a>
+          }
         </article>
       }
     </div>

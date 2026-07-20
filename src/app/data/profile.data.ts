@@ -12,6 +12,7 @@ export interface Project {
   summary: LocalizedText;
   tags: string[];
   highlight: LocalizedText;
+  liveUrl?: string;
 }
 
 export interface EducationItem {
@@ -45,6 +46,7 @@ export const PROFILE = {
     en: 'assets/cv-darwing-hernandez-en.pdf',
   } as LocalizedText,
   englishAcademyUrl: 'https://hn.linkedin.com/company/academiasilvermonthn',
+  dataVentureUrl: 'https://darden-analitycs.netlify.app/',
 
   role: {
     es: 'Full Stack Developer · .NET & Angular · Data / BI',
@@ -101,6 +103,17 @@ export const SKILL_GROUPS: SkillGroup[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'data-analytics-venture',
+    name: 'Data Analytics Services',
+    summary: {
+      es: 'Sitio propio para mi emprendimiento de análisis de datos: servicios de dashboards, reporting y análisis a medida para negocios que buscan tomar decisiones basadas en datos.',
+      en: 'My own site for a data analytics venture: dashboards, reporting and tailored analysis services for businesses looking to make data-driven decisions.',
+    },
+    tags: ['Power BI', 'Data Analysis', 'Dashboards'],
+    highlight: { es: 'Emprendimiento propio', en: 'Personal venture' },
+    liveUrl: 'https://darden-analitycs.netlify.app/',
+  },
   {
     id: 'tenders',
     name: 'Tender & Bid Management Platform',

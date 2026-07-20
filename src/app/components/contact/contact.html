@@ -26,6 +26,13 @@
           <span class="contact__link-value">{{ profile.github.split('/').pop() }}</span>
         </span>
       </a>
+      <a class="contact__link card" [href]="profile.dataVentureUrl" target="_blank" rel="noopener">
+        <app-icon name="database" class="contact__link-icon"></app-icon>
+        <span class="contact__link-text">
+          <span class="contact__link-label">{{ i18n.t(ui.contact.dataVenture) }}</span>
+          <span class="contact__link-value">darden-analitycs.netlify.app</span>
+        </span>
+      </a>
     </div>
   </div>
 </section>

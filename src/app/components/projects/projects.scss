@@ -36,6 +36,24 @@
   gap: 8px;
 }
 
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  align-self: flex-start;
+
+  app-icon {
+    font-size: 14px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 @media (max-width: 800px) {
   .projects__grid {
     grid-template-columns: 1fr;

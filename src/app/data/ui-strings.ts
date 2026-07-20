@@ -35,6 +35,7 @@ export const UI = {
       es: 'Sistemas reales en producción y proyectos académicos. Nombres de clientes omitidos por confidencialidad.',
       en: 'Real systems in production and academic projects. Client names omitted for confidentiality.',
     } as LocalizedText,
+    viewSite: { es: 'Ver sitio', en: 'View site' } as LocalizedText,
   },
   education: {
     eyebrow: { es: '04 · Educación', en: '04 · Education' } as LocalizedText,
@@ -58,6 +59,7 @@ export const UI = {
       en: "I'm looking for Full Stack Developer opportunities (full-time or freelance), open to remote work or relocating to any country. If my profile fits your team or project, reach out.",
     } as LocalizedText,
     email: { es: 'Correo', en: 'Email' } as LocalizedText,
+    dataVenture: { es: 'Análisis de Datos', en: 'Data Analytics' } as LocalizedText,
   },
   footer: {
     built: {
