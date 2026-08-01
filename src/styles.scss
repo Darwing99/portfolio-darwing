@@ -11,12 +11,12 @@
 
   --text: #e7ecf2;
   --text-muted: #8fa0af;
-  --text-faint: #5c6b78;
+  --text-faint: #7a8996;
 
   --accent-gold: #d9ae61;
   --accent-gold-soft: rgba(217, 174, 97, 0.14);
-  --accent-blue: #4a7fb5;
-  --accent-blue-soft: rgba(74, 127, 181, 0.14);
+  --accent-blue: #5f8fc5;
+  --accent-blue-soft: rgba(95, 143, 197, 0.14);
 
   --danger: #c26a5f;
   --success: #6fae8a;
@@ -117,6 +117,7 @@ button {
 /* Focus visibility (accessibility floor) */
 a:focus-visible,
 button:focus-visible,
+summary:focus-visible,
 [tabindex]:focus-visible {
   outline: 2px solid var(--accent-gold);
   outline-offset: 3px;
@@ -179,7 +180,7 @@ button:focus-visible,
   font-size: 12.5px;
   color: var(--accent-blue);
   background: var(--accent-blue-soft);
-  border: 1px solid rgba(74, 127, 181, 0.3);
+  border: 1px solid rgba(95, 143, 197, 0.3);
   border-radius: var(--radius-sm);
   padding: 3px 9px;
   display: inline-block;

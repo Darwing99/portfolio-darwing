@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://darwing99.github.io/portfolio-darwing/sitemap.xml

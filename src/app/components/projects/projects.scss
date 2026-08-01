@@ -36,6 +36,71 @@
   gap: 8px;
 }
 
+.project-card__case-study {
+  border-top: 1px solid var(--border-soft);
+  padding-top: 14px;
+
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-blue);
+    cursor: pointer;
+    user-select: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '▸';
+      font-size: 11px;
+      transition: transform 0.15s ease;
+    }
+  }
+
+  &[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .is-open-label {
+    display: none;
+  }
+
+  &[open] .is-closed-label {
+    display: none;
+  }
+
+  &[open] .is-open-label {
+    display: inline;
+  }
+
+  dl {
+    margin-top: 16px;
+    display: grid;
+    gap: 12px;
+  }
+
+  dt {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 3px;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+}
+
 .project-card__link {
   display: inline-flex;
   align-items: center;

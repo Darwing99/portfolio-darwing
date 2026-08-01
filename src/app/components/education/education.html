@@ -1,7 +1,6 @@
 <section class="section" id="education">
   <div class="container">
-    <p class="eyebrow">{{ i18n.t(ui.education.eyebrow) }}</p>
-    <h2 class="section-title" appReveal>{{ i18n.t(ui.education.title) }}</h2>
+    <app-section-header [eyebrow]="ui.education.eyebrow" [title]="ui.education.title"></app-section-header>
 
     <ol class="timeline">
       @for (item of items; track item.id; let i = $index) {

@@ -19,6 +19,9 @@ export const UI = {
   about: {
     eyebrow: { es: '01 · Perfil', en: '01 · Profile' } as LocalizedText,
     title: { es: 'Sobre mí', en: 'About me' } as LocalizedText,
+    statYears: { es: 'Años de experiencia', en: 'Years of experience' } as LocalizedText,
+    statProjects: { es: 'Proyectos entregados', en: 'Projects delivered' } as LocalizedText,
+    statHonors: { es: 'Honores académicos', en: 'Academic honors' } as LocalizedText,
   },
   skills: {
     eyebrow: { es: '02 · Stack técnico', en: '02 · Technical stack' } as LocalizedText,
@@ -36,6 +39,13 @@ export const UI = {
       en: 'Real systems in production and academic projects. Client names omitted for confidentiality.',
     } as LocalizedText,
     viewSite: { es: 'Ver sitio', en: 'View site' } as LocalizedText,
+    viewCaseStudy: { es: 'Ver caso de estudio', en: 'View case study' } as LocalizedText,
+    hideCaseStudy: { es: 'Ocultar caso de estudio', en: 'Hide case study' } as LocalizedText,
+    problem: { es: 'Problema', en: 'Problem' } as LocalizedText,
+    solution: { es: 'Solución', en: 'Solution' } as LocalizedText,
+    architecture: { es: 'Arquitectura', en: 'Architecture' } as LocalizedText,
+    results: { es: 'Resultados', en: 'Results' } as LocalizedText,
+    learnings: { es: 'Aprendizajes', en: 'Learnings' } as LocalizedText,
   },
   education: {
     eyebrow: { es: '04 · Educación', en: '04 · Education' } as LocalizedText,

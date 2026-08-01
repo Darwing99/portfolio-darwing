@@ -1,8 +1,10 @@
 <section class="section" id="projects">
   <div class="container">
-    <p class="eyebrow">{{ i18n.t(ui.projects.eyebrow) }}</p>
-    <h2 class="section-title" appReveal>{{ i18n.t(ui.projects.title) }}</h2>
-    <p class="section-lead" appReveal>{{ i18n.t(ui.projects.lead) }}</p>
+    <app-section-header
+      [eyebrow]="ui.projects.eyebrow"
+      [title]="ui.projects.title"
+      [lead]="ui.projects.lead"
+    ></app-section-header>
 
     <div class="projects__grid">
       @for (project of projects; track project.id; let i = $index) {
@@ -15,6 +17,31 @@
               <span class="chip">{{ tag }}</span>
             }
           </div>
+
+          <details class="project-card__case-study">
+            <summary>
+              <span class="is-closed-label">{{ i18n.t(ui.projects.viewCaseStudy) }}</span>
+              <span class="is-open-label">{{ i18n.t(ui.projects.hideCaseStudy) }}</span>
+            </summary>
+
+            <dl>
+              <dt>{{ i18n.t(ui.projects.problem) }}</dt>
+              <dd>{{ i18n.t(project.caseStudy.problem) }}</dd>
+
+              <dt>{{ i18n.t(ui.projects.solution) }}</dt>
+              <dd>{{ i18n.t(project.caseStudy.solution) }}</dd>
+
+              <dt>{{ i18n.t(ui.projects.architecture) }}</dt>
+              <dd>{{ i18n.t(project.caseStudy.architecture) }}</dd>
+
+              <dt>{{ i18n.t(ui.projects.results) }}</dt>
+              <dd>{{ i18n.t(project.caseStudy.results) }}</dd>
+
+              <dt>{{ i18n.t(ui.projects.learnings) }}</dt>
+              <dd>{{ i18n.t(project.caseStudy.learnings) }}</dd>
+            </dl>
+          </details>
+
           @if (project.liveUrl) {
             <a class="project-card__link" [href]="project.liveUrl" target="_blank" rel="noopener">
               {{ i18n.t(ui.projects.viewSite) }}

@@ -1,8 +1,10 @@
 <section class="section" id="skills">
   <div class="container">
-    <p class="eyebrow">{{ i18n.t(ui.skills.eyebrow) }}</p>
-    <h2 class="section-title" appReveal>{{ i18n.t(ui.skills.title) }}</h2>
-    <p class="section-lead" appReveal>{{ i18n.t(ui.skills.lead) }}</p>
+    <app-section-header
+      [eyebrow]="ui.skills.eyebrow"
+      [title]="ui.skills.title"
+      [lead]="ui.skills.lead"
+    ></app-section-header>
 
     <div class="skills__grid">
       @for (group of groups; track group.id; let i = $index) {

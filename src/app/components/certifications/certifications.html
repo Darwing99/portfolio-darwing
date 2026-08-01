@@ -1,8 +1,10 @@
 <section class="section" id="certifications">
   <div class="container">
-    <p class="eyebrow">{{ i18n.t(ui.certifications.eyebrow) }}</p>
-    <h2 class="section-title" appReveal>{{ i18n.t(ui.certifications.title) }}</h2>
-    <p class="section-lead" appReveal>{{ i18n.t(ui.certifications.lead) }}</p>
+    <app-section-header
+      [eyebrow]="ui.certifications.eyebrow"
+      [title]="ui.certifications.title"
+      [lead]="ui.certifications.lead"
+    ></app-section-header>
 
     <div class="cert-grid">
       @for (item of items; track item.id; let i = $index) {
@@ -14,6 +16,28 @@
           <h3 class="cert-card__title">{{ i18n.t(item.title) }}</h3>
           <p class="cert-card__org">{{ item.org }}</p>
           <p class="cert-card__detail">{{ i18n.t(item.detail) }}</p>
+
+          @if (item.modules) {
+            <ul class="cert-card__modules">
+              @for (m of item.modules; track m.label.en) {
+                <li [class.is-upcoming]="m.status === 'upcoming'">
+                  @if (m.status === 'upcoming') {
+                    <span class="cert-card__module-dot" aria-hidden="true"></span>
+                  } @else {
+                    <app-icon
+                      [name]="m.status === 'completed' ? 'check' : 'clock'"
+                      class="cert-card__module-icon"
+                      [class.is-completed]="m.status === 'completed'"
+                    ></app-icon>
+                  }
+                  <span class="cert-card__module-label">{{ i18n.t(m.label) }}</span>
+                  @if (m.score) {
+                    <span class="cert-card__module-score">{{ m.score }}</span>
+                  }
+                </li>
+              }
+            </ul>
+          }
         </article>
       }
     </div>

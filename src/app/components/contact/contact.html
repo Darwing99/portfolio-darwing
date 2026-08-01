@@ -1,8 +1,10 @@
 <section class="section contact" id="contact">
   <div class="container">
-    <p class="eyebrow">{{ i18n.t(ui.contact.eyebrow) }}</p>
-    <h2 class="section-title" appReveal>{{ i18n.t(ui.contact.title) }}</h2>
-    <p class="section-lead" appReveal>{{ i18n.t(ui.contact.lead) }}</p>
+    <app-section-header
+      [eyebrow]="ui.contact.eyebrow"
+      [title]="ui.contact.title"
+      [lead]="ui.contact.lead"
+    ></app-section-header>
 
     <div class="contact__links" appReveal>
       <a class="contact__link card" [href]="'mailto:' + profile.email">

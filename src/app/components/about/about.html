@@ -1,13 +1,41 @@
 <section class="section" id="about">
   <div class="container">
-    <p class="eyebrow">{{ i18n.t(ui.about.eyebrow) }}</p>
-    <h2 class="section-title" appReveal>{{ i18n.t(ui.about.title) }}</h2>
+    <app-section-header [eyebrow]="ui.about.eyebrow" [title]="ui.about.title"></app-section-header>
+
+    <div class="credibility-stats" appReveal>
+      <div class="stat card">
+        <app-icon name="clock" class="stat__icon"></app-icon>
+        <span class="stat__body">
+          <span class="stat__value">{{ profile.yearsExperience }}</span>
+          <span class="stat__label">{{ i18n.t(ui.about.statYears) }}</span>
+        </span>
+      </div>
+      <div class="stat card">
+        <app-icon name="check" class="stat__icon"></app-icon>
+        <span class="stat__body">
+          <span class="stat__value">{{ projectCount }}</span>
+          <span class="stat__label">{{ i18n.t(ui.about.statProjects) }}</span>
+        </span>
+      </div>
+      @if (honors) {
+        <div class="stat card">
+          <app-icon name="award" class="stat__icon"></app-icon>
+          <span class="stat__body">
+            <span class="stat__value">{{ i18n.t(honors) }}</span>
+            <span class="stat__label">{{ i18n.t(ui.about.statHonors) }}</span>
+          </span>
+        </div>
+      }
+    </div>
 
     <div class="about__grid">
       <p class="about__text" appReveal>{{ i18n.t(profile.summary) }}</p>
 
-      <div class="about__facts" appReveal>
-        <span class="about__facts-location">{{ profile.location }}</span>
+      <div class="about__facts card" appReveal>
+        <span class="about__facts-location">
+          <app-icon name="globe" class="about__facts-icon"></app-icon>
+          {{ profile.location }} · {{ i18n.t(profile.timezone) }}
+        </span>
         <span class="about__facts-availability">{{ i18n.t(profile.availability) }}</span>
         <span class="about__facts-divider" aria-hidden="true"></span>
         <span class="about__facts-learning">{{ i18n.t(profile.currentFocus) }}</span>

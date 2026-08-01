@@ -4,6 +4,7 @@ import { SKILL_GROUPS } from '../../data/profile.data';
 import { UI } from '../../data/ui-strings';
 import { RevealDirective } from '../../core/scroll-reveal.directive';
 import { Icon, IconName } from '../icon/icon';
+import { SectionHeader } from '../section-header/section-header';
 
 const GROUP_ICONS: Record<string, IconName> = {
   backend: 'server',
@@ -16,7 +17,7 @@ const GROUP_ICONS: Record<string, IconName> = {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [RevealDirective, Icon],
+  imports: [RevealDirective, Icon, SectionHeader],
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })

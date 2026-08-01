@@ -10,7 +10,7 @@ export interface LocalizedText {
 const STORAGE_KEY = 'portfolio-lang';
 
 function detectInitialLang(): Lang {
-  if (typeof window === 'undefined') return 'es';
+  if (typeof window === 'undefined') return 'en';
 
   try {
     const stored = window.localStorage.getItem(STORAGE_KEY);
@@ -19,8 +19,8 @@ function detectInitialLang(): Lang {
     /* localStorage unavailable — fall through to browser detection */
   }
 
-  const nav = window.navigator?.language?.toLowerCase() ?? 'es';
-  return nav.startsWith('en') ? 'en' : 'es';
+  const nav = window.navigator?.language?.toLowerCase() ?? 'en';
+  return nav.startsWith('es') ? 'es' : 'en';
 }
 
 @Injectable({ providedIn: 'root' })

@@ -3,11 +3,12 @@ import { I18nService } from '../../core/i18n.service';
 import { EDUCATION } from '../../data/profile.data';
 import { UI } from '../../data/ui-strings';
 import { RevealDirective } from '../../core/scroll-reveal.directive';
+import { SectionHeader } from '../section-header/section-header';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [RevealDirective],
+  imports: [RevealDirective, SectionHeader],
   templateUrl: './education.html',
   styleUrl: './education.scss',
 })

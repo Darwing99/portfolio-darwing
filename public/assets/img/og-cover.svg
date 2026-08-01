@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b0f14"/>
+      <stop offset="1" stop-color="#121821"/>
+    </linearGradient>
+    <linearGradient id="mark-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eccb92"/>
+      <stop offset="1" stop-color="#d9ae61"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- faint grid texture -->
+  <g opacity="0.05" stroke="#8fa0af" stroke-width="1">
+    <line x1="0" y1="140" x2="1200" y2="140"/>
+    <line x1="0" y1="490" x2="1200" y2="490"/>
+    <line x1="120" y1="0" x2="120" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/>
+  </g>
+
+  <!-- brand mark (matches favicon: gold + blue diamonds joined by a node line) -->
+  <g transform="translate(120 120)">
+    <rect x="18" y="0" width="36" height="36" transform="rotate(45 36 18)" fill="url(#mark-gold)"/>
+    <rect x="18" y="72" width="36" height="36" transform="rotate(45 36 90)" fill="#4a7fb5"/>
+    <line x1="36" y1="44" x2="36" y2="72" stroke="#22303c" stroke-width="4"/>
+  </g>
+
+  <text x="120" y="330" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="64" font-weight="600" fill="#e7ecf2" letter-spacing="-1">
+    Darwing Hernández
+  </text>
+  <text x="120" y="384" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="26" fill="#d9ae61" letter-spacing="0.5">
+    Full Stack Developer &#183; .NET &amp; Angular &#183; Data / BI
+  </text>
+
+  <text x="120" y="446" font-family="'Inter', 'Segoe UI', sans-serif" font-size="22" fill="#8fa0af">
+    Enterprise software, Clean Architecture &amp; BI-driven engineering
+  </text>
+
+  <!-- tech chip row -->
+  <g font-family="'JetBrains Mono', 'Consolas', monospace" font-size="18" fill="#4a7fb5">
+    <g transform="translate(120 486)">
+      <rect width="82" height="34" rx="4" fill="rgba(74,127,181,0.14)" stroke="#4a7fb5" stroke-opacity="0.3"/>
+      <text x="16" y="23">.NET 8</text>
+    </g>
+    <g transform="translate(214 486)">
+      <rect width="98" height="34" rx="4" fill="rgba(74,127,181,0.14)" stroke="#4a7fb5" stroke-opacity="0.3"/>
+      <text x="16" y="23">Angular</text>
+    </g>
+    <g transform="translate(324 486)">
+      <rect width="108" height="34" rx="4" fill="rgba(74,127,181,0.14)" stroke="#4a7fb5" stroke-opacity="0.3"/>
+      <text x="16" y="23">Power BI</text>
+    </g>
+    <g transform="translate(444 486)">
+      <rect width="122" height="34" rx="4" fill="rgba(74,127,181,0.14)" stroke="#4a7fb5" stroke-opacity="0.3"/>
+      <text x="16" y="23">SQL Server</text>
+    </g>
+  </g>
+
+  <text x="120" y="560" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="20" fill="#5c6b78">
+    darwing99.github.io/portfolio-darwing
+  </text>
+</svg>

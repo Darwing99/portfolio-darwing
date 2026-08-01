@@ -13,7 +13,9 @@ export type IconName =
   | 'code'
   | 'database'
   | 'workflow'
-  | 'wrench';
+  | 'wrench'
+  | 'award'
+  | 'globe';
 
 @Component({
   selector: 'app-icon',
